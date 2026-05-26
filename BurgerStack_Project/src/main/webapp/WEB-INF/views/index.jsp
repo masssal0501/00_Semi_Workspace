@@ -7,6 +7,8 @@
 <link rel="shortcut icon" type="image/x-icon" href="resources/images/BS_logo2.png" />
 </head>
 <body>
+	<!-- 테스트 입니다. -->
+
 	
 	<!-- 항상 모든 페이지 상단에는 menubar.jsp 가 보여지게끔 include -->
 	<jsp:include page="common/menubarHO.jsp" />
