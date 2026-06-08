@@ -22,7 +22,7 @@ public class StoreDao {
 	private SqlSessionTemplate sqlSessionTemplate;
 
 	// 점주 계정 확인
-	public int checkOwner(Long ownerUserId) {
+	public int checkOwner(Integer ownerUserId) {
 		return sqlSessionTemplate.selectOne("storeMapper.checkOwner", ownerUserId);
 	}
 
@@ -38,7 +38,7 @@ public class StoreDao {
 	}
 
 	// 점포 상세 조회
-	public Store selectStoreDetail(Long storeId) {
+	public Store selectStoreDetail(Integer storeId) {
 		return sqlSessionTemplate.selectOne("storeMapper.selectStoreDetail", storeId);
 	}
 
@@ -60,12 +60,12 @@ public class StoreDao {
 	}
 
 	// 점포 폐점 처리
-	public int deleteStore(SqlSession sqlSession, Long storeId) {
+	public int deleteStore(SqlSession sqlSession, Integer storeId) {
 
 		return sqlSession.update("storeMapper.deleteStore", storeId);
 	}
 
-	public Long findStoreIdByOwnerUserNo(Long OwnerUserNo) {
+	public Integer findStoreIdByOwnerUserNo(Integer OwnerUserNo) {
 		return storeMapper.findStoreIdByOwnerUserNo(OwnerUserNo);
 	}
 }

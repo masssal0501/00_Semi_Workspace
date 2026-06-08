@@ -13,12 +13,12 @@ import lombok.ToString;
 @ToString
 public class StoreDetailView {
 
-    private Long storeId;
+    private Integer storeId;
     private String storeCode;
     private String storeName;
     private String phone;
     private String address;
-    private Long ownerUserId;
+    private Integer ownerUserId;
     private String status;
     private String ownerLoginId;
     private String ownerUserName;

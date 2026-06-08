@@ -15,9 +15,9 @@ import lombok.ToString;
 @Setter
 @ToString
 public class StoreClosing {
-    private Long storeClosingId;
+    private Integer storeClosingId;
     private LocalDate businessDate;
     private String closingMemo;
     private LocalDateTime closedAt;
-    private Long storeId;
+    private Integer storeId;
 }

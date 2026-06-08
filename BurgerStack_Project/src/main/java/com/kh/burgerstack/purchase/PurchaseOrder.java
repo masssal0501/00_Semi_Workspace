@@ -15,11 +15,11 @@ import lombok.ToString;
 @Setter
 @ToString
 public class PurchaseOrder {
-    private Long purchaseOrderId;
+    private Integer purchaseOrderId;
     private BigDecimal totalAmount;
     private String orderMemo;
     private String status;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
-    private Long storeId;
+    private Integer storeId;
 }

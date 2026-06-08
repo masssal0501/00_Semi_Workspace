@@ -17,7 +17,7 @@ import lombok.ToString;
 @Getter
 @ToString
 public class Material {
-	private Long materialId;
+	private Integer materialId;
 	private String materialCode;
 	private String materialName;
 	private String materialType;

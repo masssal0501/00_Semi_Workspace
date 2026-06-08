@@ -21,7 +21,7 @@ public class MaterialService {
     	return materialDao.selectMaterialList();
     } //selectMaterialList
     
-    public Material materialDetail(Long materialId) {
+    public Material materialDetail(Integer materialId) {
     	return materialDao.materialDetail(materialId);
     } //materialDetail
     
@@ -30,12 +30,12 @@ public class MaterialService {
     	return materialDao.updateMaterial(m);
     }
     
-    public Material selectMaterial(Long finalMaterialId) {
+    public Material selectMaterial(Integer finalMaterialId) {
 		return materialDao.selectMaterial(finalMaterialId);
 	}
     
     @Transactional
-    public int deleteMaterial(Long materialId) {
+    public int deleteMaterial(Integer materialId) {
     	return materialDao.deleteMaterial(materialId);
     }
 }

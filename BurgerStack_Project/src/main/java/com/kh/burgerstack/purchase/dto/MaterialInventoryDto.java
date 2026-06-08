@@ -19,7 +19,7 @@ public class MaterialInventoryDto {
 
     private BigDecimal costPrice;
 
-    private Long currentQuantity;
+    private Integer currentQuantity;
 
     private String status;
 

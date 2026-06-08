@@ -109,7 +109,7 @@ public class MaterialController {
 	 */
 	@GetMapping("detail")
 	@ResponseBody // 💡 페이지 이동이 아니라 데이터를 반환하기 위해 필수 지정!
-	public Material materialDetail(@RequestParam("materialId") Long materialId) {
+	public Material materialDetail(@RequestParam("materialId") Integer materialId) {
 	    
 	    // 1. 서비스 단을 통해 DB에서 자재 단건 조회 수행
 	    Material material = materialService.materialDetail(materialId);
@@ -126,7 +126,7 @@ public class MaterialController {
 	 * @return
 	 */
 	@GetMapping("{materialId}/edit") // 💡 경로에 {materialId} 가변인자 추가
-	public String materialEdit(@PathVariable("materialId") Long materialId, Model model) {
+	public String materialEdit(@PathVariable("materialId") Integer materialId, Model model) {
 	    
 	    // EnrollForm 재사용
 		Material material = materialService.materialDetail(materialId); 
@@ -146,12 +146,12 @@ public class MaterialController {
 	 */
 	@PostMapping({"{materialId}"})
 	public String updateMaterial(
-	        @PathVariable(value = "materialId", required = false) Long pathMaterialId,
+	        @PathVariable(value = "materialId", required = false) Integer pathMaterialId,
 	        @ModelAttribute Material m,
 	        @RequestParam(value = "materialImage", required = false) MultipartFile imageFile,
 	        Model model) {
 	    
-	    Long finalMaterialId = (pathMaterialId != null) ? pathMaterialId : m.getMaterialId();
+	    Integer finalMaterialId = (pathMaterialId != null) ? pathMaterialId : m.getMaterialId();
 	    System.out.println("finalMaterialId : " + finalMaterialId);
 	    System.out.println("getMaterialId : " + m.getMaterialId());
 	    if (finalMaterialId == null) {
@@ -193,7 +193,7 @@ public class MaterialController {
 	} //updateMaterial
 	
 	@PostMapping("{materialId}/status")
-	public String deleteMaterial(@PathVariable("materialId") Long materialId, Model model, HttpSession session) {
+	public String deleteMaterial(@PathVariable("materialId") Integer materialId, Model model, HttpSession session) {
 		
 	    int result = materialService.deleteMaterial(materialId);
 	    

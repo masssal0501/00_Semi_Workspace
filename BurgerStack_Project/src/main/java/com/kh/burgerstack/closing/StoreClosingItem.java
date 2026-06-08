@@ -12,12 +12,12 @@ import lombok.ToString;
 @Setter
 @ToString
 public class StoreClosingItem {
-    private Long storeClosingItemId;
-    private Long systemQuantity;
-    private Long physicalQuantity;
-    private Long disposalQuantity;
+    private Integer storeClosingItemId;
+    private Integer systemQuantity;
+    private Integer physicalQuantity;
+    private Integer disposalQuantity;
     private String closingItemMemo;
     private String materialNameSnapshot;
-    private Long storeClosingId;
-    private Long storeInventoryId;
+    private Integer storeClosingId;
+    private Integer storeInventoryId;
 }

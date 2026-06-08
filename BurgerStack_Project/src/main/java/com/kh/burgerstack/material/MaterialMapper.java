@@ -10,8 +10,8 @@ public interface MaterialMapper {
 	public int insert(Material m);
 	
 	public ArrayList<Material> selectMaterialList();
-	public Material materialDetail(Long materialId);
+	public Material materialDetail(Integer materialId);
 	public int updateMaterial(Material m);
-	public Material selectMaterial(Long finalMaterialId);
-	public int deleteMaterial(Long materialId);
+	public Material selectMaterial(Integer finalMaterialId);
+	public int deleteMaterial(Integer materialId);
 }

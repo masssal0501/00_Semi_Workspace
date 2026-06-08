@@ -15,7 +15,7 @@ import lombok.ToString;
 @ToString
 public class StoreListRow {
 
-    private Long storeId;
+    private Integer storeId;
     private String storeCode;
     private String storeName;
     private String phone;

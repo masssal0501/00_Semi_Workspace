@@ -72,7 +72,7 @@ public class StoreController {
  
     // 점포 상세 조회
     @GetMapping("/{storeId}")
-    public String selectStoreDetail(@PathVariable("storeId") Long storeId,
+    public String selectStoreDetail(@PathVariable("storeId") Integer storeId,
                                     Model model) {
 
         Store store = storeService.selectStoreDetail(storeId);
@@ -84,7 +84,7 @@ public class StoreController {
 
     // 점포 수정 처리
     @PostMapping("/{storeId}")
-    public String updateStore(@PathVariable("storeId") Long storeId,
+    public String updateStore(@PathVariable("storeId") Integer storeId,
                               Store store) {
 
         store.setStoreId(storeId);
@@ -100,7 +100,7 @@ public class StoreController {
 
     @GetMapping("/{storeId}/status")
     public String deleteStore(
-            @PathVariable("storeId") Long storeId) {
+            @PathVariable("storeId") Integer storeId) {
 
         int result = storeService.deleteStore(storeId);
 

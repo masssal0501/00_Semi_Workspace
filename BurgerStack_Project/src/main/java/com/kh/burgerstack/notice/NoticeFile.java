@@ -14,11 +14,11 @@ import lombok.ToString;
 @Setter
 @ToString
 public class NoticeFile {
-    private Long noticeFileId;
+    private Integer noticeFileId;
     private String originalName;
     private String storedName;
     private String storagePath;
     private LocalDateTime createdAt;
     private LocalDateTime deletedAt;
-    private Long noticeId;
+    private Integer noticeId;
 }

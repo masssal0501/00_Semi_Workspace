@@ -14,12 +14,12 @@ import lombok.ToString;
 @Setter
 @ToString
 public class Store {
-    private Long storeId;
+    private Integer storeId;
     private String storeCode;
     private String storeName;
     private String phone;
     private String address;
     private String status;
     private LocalDateTime createdAt;
-    private Long ownerUserNo;
+    private Integer ownerUserNo;
 }

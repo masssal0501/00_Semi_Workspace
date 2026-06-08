@@ -14,12 +14,12 @@ import lombok.ToString;
 @Setter
 @ToString
 public class PurchaseOrderItem {
-    private Long purchaseOrderItemId;
-    private Long requestQuantity;
-    private Long approvedQuantity;
+    private Integer purchaseOrderItemId;
+    private Integer requestQuantity;
+    private Integer approvedQuantity;
     private String rejectReason;
     private String materialNameSnapshot;
     private BigDecimal supplyPriceSnapshot;
-    private Long materialId;
-    private Long purchaseOrderId;
+    private Integer materialId;
+    private Integer purchaseOrderId;
 }

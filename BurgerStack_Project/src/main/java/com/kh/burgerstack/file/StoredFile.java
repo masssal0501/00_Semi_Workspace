@@ -28,7 +28,7 @@ public class StoredFile {
     private LocalDateTime deletedAt;
     private LocalDateTime createdAt;
 
-    public MaterialFile toMaterialFile(long materialId) {
+    public MaterialFile toMaterialFile(int materialId) {
         return new MaterialFile(
                 null,
                 originalName,
@@ -39,7 +39,7 @@ public class StoredFile {
                 materialId);
     }
 
-    public NoticeFile toNoticeFile(long noticeId) {
+    public NoticeFile toNoticeFile(int noticeId) {
         return new NoticeFile(
                 null,
                 originalName,
@@ -50,7 +50,7 @@ public class StoredFile {
                 noticeId);
     }
 
-    public InquiryFile toInquiryFile(long inquiryId, String attachTarget) {
+    public InquiryFile toInquiryFile(int inquiryId, String attachTarget) {
         return new InquiryFile(
                 null,
                 originalName,

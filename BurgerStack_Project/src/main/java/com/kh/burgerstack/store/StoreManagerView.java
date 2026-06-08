@@ -13,7 +13,7 @@ import lombok.ToString;
 @ToString
 public class StoreManagerView {
 
-    private Long userId;
+    private Integer userId;
     private String loginId;
     private String userName;
     private String phone;

@@ -36,7 +36,7 @@
 	</select>
 	
 	<!-- 상세조회용 -->
-	<select id="materialDetail" parameterType="long" resultType="Material">
+	<select id="materialDetail" parameterType="int" resultType="Material">
     	SELECT MATERIAL_NAME
     		 , COST_PRICE
 	         , SELLING_PRICE
@@ -67,7 +67,7 @@
     </update>
     
     <!-- 자제 상세조회용 -->
-    <select id="selectMaterial" parameterType="long" resultType="Material">
+    <select id="selectMaterial" parameterType="int" resultType="Material">
     	SELECT M.MATERIAL_ID
 		     , M.MATERIAL_CODE
 		     , M.MATERIAL_NAME
@@ -89,7 +89,7 @@
     </select>
     
     <!-- 자재 삭제용 -->
-    <update id="deleteMaterial" parameterType="long">
+    <update id="deleteMaterial" parameterType="int">
     	UPDATE MATERIALS
 		   SET STATUS = 'INACTIVE'
 		 WHERE MATERIAL_ID   = #{materialId}

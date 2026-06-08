@@ -6,7 +6,7 @@
 
     <!-- 점주 존재 여부 확인 -->
     <select id="checkOwner"
-	        parameterType="long"
+	        parameterType="int"
 	        resultType="int">
 	    SELECT COUNT(*)
 	    FROM USERS
@@ -19,7 +19,7 @@
 	        parameterType="com.kh.burgerstack.store.Store">
 	
 	    <selectKey keyProperty="storeId"
-	               resultType="long"
+	               resultType="int"
 	               order="BEFORE">
 	        SELECT SEQ_STORE.NEXTVAL
 	        FROM DUAL
@@ -120,7 +120,7 @@
 
     <!-- 점포 상세 조회 -->
 	<select id="selectStoreDetail"
-	        parameterType="long"
+	        parameterType="int"
 	        resultType="com.kh.burgerstack.store.Store">
 	
 	    SELECT
@@ -170,7 +170,7 @@
 
     <!-- 점포 삭제/폐점 처리 -->
 	<delete id="deleteStore"
-	        parameterType="long">
+	        parameterType="int">
 	
 	    DELETE FROM STORES
 	    WHERE STORE_ID = #{storeId}

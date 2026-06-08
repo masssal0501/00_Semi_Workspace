@@ -14,12 +14,12 @@ import lombok.ToString;
 @Setter
 @ToString
 public class Inquiry {
-    private Long inquiryId;
+    private Integer inquiryId;
     private String title;
     private String content;
     private String answerContent;
     private LocalDateTime createdAt;
     private LocalDateTime answeredAt;
     private LocalDateTime deletedAt;
-    private Long storeId;
+    private Integer storeId;
 }

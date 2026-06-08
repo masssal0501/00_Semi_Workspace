@@ -14,10 +14,10 @@ import lombok.ToString;
 @Setter
 @ToString
 public class PurchaseOrderHistory {
-    private Long purchaseOrderHistoryId;
+    private Integer purchaseOrderHistoryId;
     private String toStatus;
     private String reason;
     private LocalDateTime createdAt;
-    private Long createdBy;
-    private Long purchaseOrderId;
+    private Integer createdBy;
+    private Integer purchaseOrderId;
 }

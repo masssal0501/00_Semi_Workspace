@@ -19,7 +19,7 @@ public class MaterialDao {
 		return materialMapper.selectMaterialList();
 	} //selectMaterialList
 
-	public Material materialDetail(Long materialId) {
+	public Material materialDetail(Integer materialId) {
 		return materialMapper.materialDetail(materialId);
 	} //materialDetail
 	
@@ -27,11 +27,11 @@ public class MaterialDao {
 		return materialMapper.updateMaterial(m);
 	}
 	
-	public Material selectMaterial(Long finalMaterialId) {
+	public Material selectMaterial(Integer finalMaterialId) {
 		return materialMapper.selectMaterial(finalMaterialId);
 	}
 	
-	public int deleteMaterial(Long materialId) {
+	public int deleteMaterial(Integer materialId) {
 		return materialMapper.deleteMaterial(materialId);
 	}
 }

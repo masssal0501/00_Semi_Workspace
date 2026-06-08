@@ -47,7 +47,7 @@ public class StoreService {
     }
 
     // 점포 상세 조회
-    public Store selectStoreDetail(Long storeId) {
+    public Store selectStoreDetail(Integer storeId) {
 
         return storeDao.selectStoreDetail(storeId);
     }
@@ -59,7 +59,7 @@ public class StoreService {
     }
 
     // 점포 폐점 처리
-    public int deleteStore(Long storeId) {
+    public int deleteStore(Integer storeId) {
 
         return storeDao.deleteStore(sqlSession, storeId);
     }

@@ -12,10 +12,10 @@ import lombok.ToString;
 @NoArgsConstructor
 @ToString
 public class ReceiptItem {
-    private Long receiptItemId;
-    private Long receivedQuantity;
-    private Long defectQuantity;
+    private Integer receiptItemId;
+    private Integer receivedQuantity;
+    private Integer defectQuantity;
     private String receiptItemMemo;
-    private Long receiptId;
-    private Long purchaseOrderItemId;
+    private Integer receiptId;
+    private Integer purchaseOrderItemId;
 }
